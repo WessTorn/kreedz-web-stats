@@ -1,0 +1,52 @@
+{{ define "lastPro" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ template "head" }}
+</head>
+<body>
+{{ template "header" }}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <table class="table table-condensed table-hover">
+                <thead><tr><th>Maps</th><th>#</th><th>Name</th><th>Time</th><th>Date</th><th>Weapon</th><th>Pro15</th><th>Nub15</th></tr></thead>
+                <tbody>
+                {{ range . }}
+                    <tr>
+                        <td>{{ .MapName }}</td>
+                        <td>{{ .TopInMap }}</td>
+                        <td><a href="/player/{{ .PlayerID }}">{{ .PlayerName }}</a></td>
+                        <td>{{ .FormatTime }}</td>
+                        <td>{{ .Date }}</td>
+                        <td><img src="/frontend/static/weapons/{{ .Weapon }}.gif"></td>
+                        <td><a href="/map/pro/{{ .MapID }}">-link-</a></td>
+                        <td><a href="/map/nub/{{ .MapID }}">-link-</a></td>
+                    </tr>
+                {{ end }}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{{ end }}
+
+                {{ range . }}
+                <tr>
+                    <td>#{{ .Top }}</td>
+                    <td>{{ .Name }}</td>
+                    <td>{{ .FormatTime }}</td>
+                    <td>{{ .Date }}</td>
+                    <td><img src="/frontend/static/weapons/{{ .Weapon }}.gif"></td>
+                    <td>{{ .Cp }}</td>
+                    <td>{{ .Tp }}</td>
+                </tr>
+                {{ end }}
+        </div>
+    </div>
+</div>
+<br>
+</body>
+</html>

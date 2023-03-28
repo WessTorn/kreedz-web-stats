@@ -1,0 +1,34 @@
+{{ define "maps" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ template "head" }}
+</head>
+<body>
+{{ template "header" }}
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-condensed table-hover">
+                    <thead><tr><th>#</th><th>Maps</th><th>Name</th><th>Time</th><th>Date</th><th>Weapon</th><th>Pro15</th><th>Nub15</th></tr></thead>
+                    <tbody>
+                    {{ range . }}
+                    <tr>
+                        <td>{{ .Num }}</td>
+                        <td>{{ .MapName }}</td>
+                        <td><a href="/player/{{ .PlayerID }}">{{ .PlayerName }}</a> {{if .Tp}}[NOOB RECORD]{{ end }}</td>
+                        <td>{{ .FormatTime }}</td>
+                        <td>{{ .Date }}</td>
+                        <td><img src="/frontend/static/weapons/{{ .Weapon }}.gif"></td>
+                        <td><a href="/map/pro/{{ .MapID }}">-link-</a></td>
+                        <td><a href="/map/nub/{{ .MapID }}">-link-</a></td>
+                    </tr>
+                    {{ end }}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
+</body>
+</html>
+{{ end }}

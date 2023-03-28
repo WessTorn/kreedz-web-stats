@@ -1,0 +1,47 @@
+body {
+	padding-top : 60px;
+}
+
+#footer {
+	text-align : center;
+}
+
+#offline {
+	color : red;
+}
+
+#online {
+	color : blue;
+}
+
+#ingame {
+	color : green;
+}
+
+#vacok {
+	color : green;
+}
+
+#vacban {
+	color: red;
+}
+
+#footer {
+	padding-top : 30px;
+	padding-bottom : 60px;
+}
+
+a {
+	transition : all 400ms;
+	text-decoration : none;
+}
+
+a:hover {
+	text-shadow : 0 0 15px #8695b4;
+}
+
+#pageindex {
+	text-align : center;
+}
+
+#center { text-align: center; }

@@ -1,0 +1,72 @@
+{{ define "player" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ template "head" }}
+</head>
+<body>
+{{ template "header" }}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="row">
+        <div class="col-xs-4">
+          <img src="">
+        </div>
+        <div class="col-xs-8">
+          <table class="table table-condensed table-hover">
+            <thead>
+            <tr><th>Player Status</th><th></th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>{{ .Players.Name }}</td>
+              </tr>
+              <tr>
+                <td>AuthID</td>
+                <td>{{ .Players.SteamID }}</td>
+              </tr>
+              <tr>
+                <td>Country</td>
+                <td>-</td>
+              </tr>
+              <tr>
+              <tr>
+                <td>Points</td>
+                <td>{{ .Players.Points }}</td>
+              </tr>
+              <tr>
+                <td>1st Pro Record</td>
+                <td>{{ .Players.FirstRec }}</td>
+              </tr>
+              <tr>
+                <td>Pro Record</td>
+                <td>{{ .Players.Records }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <table class="table table-condensed table-hover">
+        <thead>
+        <tr><th>Map</th><th>Time</th><th>Date</th><th>Weapon</th></tr>
+        </thead>
+        <tbody>
+        {{ range .PlayerRecords }}
+          <tr>
+            <td><a href="/map/pro/{{ .MapID }}">{{ .MapName }}</a></td>
+            <td>{{ .FormatTime }}</td>
+            <td>{{ .Date }}</td>
+            <td><img src="/frontend/static/weapons/{{ .Weapon }}.gif"></td>
+          </tr>
+        {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
+</body>
+</html>
+{{ end }}

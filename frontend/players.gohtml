@@ -1,0 +1,31 @@
+{{ define "players" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ template "head" }}
+</head>
+<body>
+{{ template "header" }}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <table class="table table-condensed table-hover">
+        <thead><tr><th>#</th><th>Name</th><th>#1st</th><th>Record</th><th>Point</th></tr></thead>
+        <tbody>
+        {{ range . }}
+        <tr>
+          <td>{{ .Top }}</td>
+          <td><a href="/player/{{ .ID }}">{{ .Name }}</a></td>
+          <td>{{ .FirstRec }}</td>
+          <td>{{ .Records }}</td>
+          <td>{{ .Points }}</td>
+        </tr>
+        {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+{{ end }}
