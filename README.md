@@ -1,9 +1,7 @@
 # kreedz-web-stats
 Kreedz web stats for Counter-Strike 1.6
 
-## Description
-
-Kreedz web statistics for https://github.com/Theggv/Kreedz
+# Проект нахоидтся на стадии разработки
 
 ## Libraries Used
 
