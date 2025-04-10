@@ -1,0 +1,20 @@
+# ---> Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.log
+*.vscode
+*.db
+
+*.test
+
+*.out
+
+go.sum
+
+.vscode/launch.json
+
+/backend
+/old
