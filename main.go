@@ -9,7 +9,7 @@ import (
 func main() {
 	err := log.InitLogger("./log/")
 	if err != nil {
-		log.ErrorLogger.Fatal(err)
+		log.ErrorLogger.Fatal(err) // TODO:
 	}
 
 	err = config.InitConfig()
