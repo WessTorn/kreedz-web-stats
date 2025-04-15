@@ -1,10 +1,9 @@
 package api
 
 import (
-	"database/sql"
 	"net/http"
 )
 
-func recordHandler(w http.ResponseWriter, r *http.Request, db *sql.DB) {
+func (server *Server) recordHandler(w http.ResponseWriter, r *http.Request) {
 	// Add record
 }

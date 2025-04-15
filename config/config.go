@@ -22,7 +22,7 @@ func InitConfig() error {
 
 	data = Config{
 		BindIP: os.Getenv("BIND_IP"),
-		Port:   os.Getenv("PORT"),
+		Port:   os.Getenv("BIND_PORT"),
 	}
 
 	log.InfoLogger.Printf("Конфигурация загружена: %v", data)
@@ -35,5 +35,5 @@ func BindIP() string {
 }
 
 func BindPort() string {
-	return data.BindIP
+	return data.Port
 }
