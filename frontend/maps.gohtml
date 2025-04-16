@@ -1,0 +1,28 @@
+{{ define "maps" }}
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" }}
+<body>
+{{ template "navbar" }}
+<div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <table class="table table-condensed table-hover">
+                    <thead><tr><th>#</th><th>Maps</th><th>Pro15</th><th>Nub15</th></tr></thead>
+                    <tbody>
+                    {{ range . }}
+                    <tr>
+                        <td>{{ .Num }}</td>
+                        <td>{{ .Name }}</td>
+                        <td><a href="/map/pro/{{ .ID }}">-link-</a></td>
+                        <td><a href="/map/nub/{{ .ID }}">-link-</a></td>
+                    </tr>
+                    {{ end }}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+</div>
+</body>
+</html>
+{{ end }}

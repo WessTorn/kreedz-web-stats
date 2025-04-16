@@ -10,5 +10,6 @@ type Server struct {
 }
 
 func (server *Server) InitSite() {
-	http.HandleFunc("/", server.homeHandler) // Главная страница
+	http.HandleFunc("/", server.homeHandler)
+	http.HandleFunc("/maps/", server.mapsHandler)
 }
