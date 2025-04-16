@@ -19,6 +19,7 @@ func (server *Server) InitApi() {
 }
 
 func Protect(next http.HandlerFunc) http.HandlerFunc {
+
 	return func(w http.ResponseWriter, r *http.Request) {
 		ip := r.RemoteAddr
 		ipOnly := strings.Split(ip, ":")[0]

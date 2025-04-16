@@ -1,0 +1,52 @@
+{{ define "home" }}
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" }}
+<body>
+{{ template "navbar" }}
+<div class="container">
+    <div class="row">
+        <b>Команды для игроков.</b>
+        </br>
+        <table width=100% cellpadding=2 cellspacing=0 border=0>
+            <br><tr><td>/fov 105 <td>- Изменить свой FOV. (90 дефолт)</tr>
+            <tr bgcolor="#F5F5F5"><td>/cp <td>- Чекпоинт.</tr>
+            <tr><td>/tp /gc<td>- Телепорт к чекпоинту.</tr>
+            <tr bgcolor="#F5F5F5"> <td>/stuck<td>- Телепорт к предыдущему чекпоинту.</tr>
+            <tr><td>/pause /unpause /p<td>- Пауза. (остановить таймер)</tr>
+            <tr bgcolor="#F5F5F5"> <td>/start /restart <td>- Телепорт на старт. (возобновить таймер)</tr>
+            <tr><td>/stop /reset <td>- Остановить таймер</tr>
+            <tr bgcolor="#F5F5F5"> <td>/startpos /savestart<td>- Сохранить респавн старта</tr>
+            <tr> <td>/sunglasses<td>- Исчезающий экран для ярких карт</tr>
+            <tr bgcolor="#F5F5F5"> <td>/spechide<td>- Скрыть наблюдателей</tr>
+            <tr> <td>/speclist<td>- Скрыть наблюдателей </tr>
+            <tr bgcolor="#F5F5F5"> <td>/showkeys <td>- Показать зажатые клавишы</tr>
+            <tr> <td>/showkeysspec<td>- Показать зажатые клавишы (наблюдатель)</tr>
+            <tr bgcolor="#F5F5F5"> <td>/invis<td>- Скрыть игроков и воду</tr>
+            <tr> <td>/menu<td>- Главное меню</tr>
+            <tr bgcolor="#F5F5F5"> <td>/noclip /nc<td>- Включить / отключить noclip</tr>
+            <tr> <td>/settings<td>- Меню настроек</tr>
+            <tr bgcolor="#F5F5F5"> <td>/spec /ct<td>- Перейти к Зрителям / КТ</tr>
+            <tr> <td>/cfr<td>- Показать личный лучший рекорд</tr>
+            <tr bgcolor="#F5F5F5"> <td>/top /top15<td>- Показать PRO top15 карты</tr>
+            <tr> <td>/pro15<td>- Показать PRO top15 карты</tr>
+            <tr bgcolor="#F5F5F5"> <td>/nub15 /noob15<td>- Показать NUB top15 карты</tr>
+            <tr> <td>/rec /record<td>- Показать топ 1 PRO карты на сервере</tr>
+            <tr bgcolor="#F5F5F5"> <td>/goto<td>- Телепортироваться к игроку</tr>
+            <tr> <td>/allowgoto<td> </tr>
+            <tr bgcolor="#F5F5F5"> <td>/measure /dist /distance<td>- Измерить расстояние от точки А до точки В</tr>
+            <tr> <td>/wr /ru<td>- Показать мировой рекорд карты</tr>
+            <tr bgcolor="#F5F5F5"> <td>/mute<td>- Заткнуть игрока (У себя)</tr>
+            <tr> <td>/rtv<td>- Проголосовать за смену карты</tr>
+            <tr bgcolor="#F5F5F5"> <td>/maps<td>- Показать список карт</tr>
+            <tr> <td>timeleft<td>- Сколько осталось времени до смены карты</tr>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+{{ end }}

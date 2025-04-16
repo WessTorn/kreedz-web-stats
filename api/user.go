@@ -6,19 +6,19 @@ import (
 	"net/http"
 )
 
-type request struct {
-	SteamID string `json:"steam_id"`
-	Name    string `json:"name"`
-}
-
-type response struct {
-	ID int64 `json:"id"`
-}
-
 func (server *Server) userHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
+	}
+
+	type request struct {
+		SteamID string `json:"steam_id"`
+		Name    string `json:"name"`
+	}
+
+	type response struct {
+		ID int64 `json:"id"`
 	}
 
 	var req request
